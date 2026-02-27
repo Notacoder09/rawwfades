@@ -5,31 +5,29 @@ import Image from "next/image";
 
 const galleryImages = [
   {
-    src: "/images/gallery-1.jpg",
-    alt: "Locs with taper fade",
-    span: "row-span-2", // tall
+    src: "/images/608079301_17954485071024441_5442485020225961583_n.jpg",
+    alt: "Locs retwist with taper fade",
   },
   {
-    src: "/images/gallery-2.jpg",
+    src: "/images/610837985_2340012476466934_4149633128175065313_n.jpg",
     alt: "Braids with skin fade",
-    span: "",
   },
   {
-    src: "/images/gallery-3.jpg",
-    alt: "Clean line up and shape up",
-    span: "",
+    src: "/images/612478020_17955705225024441_6935614606378423304_n.jpg",
+    alt: "Clean line up with locs",
   },
   {
-    src: "/images/gallery-4.jpg",
-    alt: "Curly taper fade",
-    span: "row-span-2", // tall
+    src: "/images/610792222_17955382002024441_4838408924917582828_n.jpg",
+    alt: "Kid's curly taper fade",
   },
   {
-    src: "/images/gallery-5.jpg",
+    src: "/images/611683051_17955381084024441_5196458382738273929_n.jpg",
+    alt: "Curly taper from the back",
+  },
+  {
+    src: "/images/625189182_17958297852024441_8641429714792506197_n.jpg",
     alt: "Low taper with waves",
-    span: "",
   },
-  // PLACEHOLDER — add more images as needed
 ];
 
 export default function Gallery() {

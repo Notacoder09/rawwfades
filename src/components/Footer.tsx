@@ -1,6 +1,5 @@
 "use client";
 
-import Image from "next/image";
 import Link from "next/link";
 
 const BOOKING_URL =
@@ -20,13 +19,12 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
           {/* Logo + Tagline */}
           <div>
-            <Image
-              src="/images/logo.png"
-              alt="RAWWFADEZ"
-              width={140}
-              height={50}
-              className="h-12 w-auto mb-4"
-            />
+            <div className="mb-4">
+              <span className="text-2xl font-black tracking-tight">
+                <span className="text-brand-red">RAWW</span>
+                <span className="text-white">FADEZ</span>
+              </span>
+            </div>
             <p className="text-white/40 text-sm max-w-xs">
               Elite cuts only. 5-star rated barber in Virginia Beach. Private
               suite. No shortcuts.
@@ -123,7 +121,9 @@ export default function Footer() {
               <p className="text-white/40 text-sm">
                 📍 3500 Virginia Beach Blvd, 5th Floor
               </p>
-              <p className="text-white/40 text-sm">Virginia Beach, VA 23452</p>
+              <p className="text-white/40 text-sm">
+                Virginia Beach, VA 23452
+              </p>
             </div>
           </div>
         </div>

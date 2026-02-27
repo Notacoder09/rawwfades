@@ -38,7 +38,7 @@ export default function Team() {
           <div className="relative group mb-8">
             <div className="relative w-72 h-72 sm:w-80 sm:h-80 rounded-xl overflow-hidden">
               <Image
-                src="/images/barber-rah.jpg"
+                src="/images/608311875_18100105672886694_2988304488248298115_n.jpg"
                 alt="Rah the Barber"
                 fill
                 className="object-cover transition-transform duration-500 group-hover:scale-105"
@@ -58,7 +58,8 @@ export default function Team() {
             Owner / Head Barber
           </p>
           <p className="text-white/50 text-center max-w-md text-lg mb-6">
-            5-star rated. Private suite. No rush, no shortcuts — just elite precision every time you sit in the chair.
+            5-star rated. Private suite. No rush, no shortcuts — just elite
+            precision every time you sit in the chair.
           </p>
 
           {/* Trinidad flag accent */}

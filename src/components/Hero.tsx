@@ -12,17 +12,19 @@ export default function Hero() {
       id="home"
       className="relative w-full h-screen flex items-center justify-center overflow-hidden"
     >
-      {/* Video Background — place hero.mp4 in /public/videos/ */}
+      {/* Video Background */}
       <video
         autoPlay
         muted
         loop
         playsInline
         className="absolute inset-0 w-full h-full object-cover"
-        poster="/images/gallery-3.jpg"
+        poster="/images/612478020_17955705225024441_6935614606378423304_n.jpg"
       >
-        {/* PLACEHOLDER — swap with your video file */}
-        <source src="/videos/hero.mp4" type="video/mp4" />
+        <source
+          src="/videos/SnapInsta.to_AQNf9wfk7dLZgVRB5lgchbrOOR7EGDgiE7ZKSGflcYsJlQ1Je_UA6z0-qjcgAh5lSME2uijEJlFrzE7dEpHOvnTIf88G6SsKu0eDYbk.mp4"
+          type="video/mp4"
+        />
       </video>
 
       {/* Dark Overlay */}
