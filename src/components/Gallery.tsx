@@ -1,0 +1,101 @@
+"use client";
+
+import { motion } from "framer-motion";
+import Image from "next/image";
+
+const galleryImages = [
+  {
+    src: "/images/gallery-1.jpg",
+    alt: "Locs with taper fade",
+    span: "row-span-2", // tall
+  },
+  {
+    src: "/images/gallery-2.jpg",
+    alt: "Braids with skin fade",
+    span: "",
+  },
+  {
+    src: "/images/gallery-3.jpg",
+    alt: "Clean line up and shape up",
+    span: "",
+  },
+  {
+    src: "/images/gallery-4.jpg",
+    alt: "Curly taper fade",
+    span: "row-span-2", // tall
+  },
+  {
+    src: "/images/gallery-5.jpg",
+    alt: "Low taper with waves",
+    span: "",
+  },
+  // PLACEHOLDER — add more images as needed
+];
+
+export default function Gallery() {
+  return (
+    <section id="gallery" className="py-20 sm:py-28 px-4 bg-black">
+      <div className="max-w-7xl mx-auto">
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6 }}
+          viewport={{ once: true }}
+          className="text-center mb-12"
+        >
+          <p className="text-brand-red text-sm font-bold uppercase tracking-[0.3em] mb-3">
+            Portfolio
+          </p>
+          <h2 className="text-4xl sm:text-5xl md:text-6xl font-black uppercase tracking-tight">
+            Our Work
+          </h2>
+        </motion.div>
+
+        {/* Masonry Grid */}
+        <div className="columns-1 sm:columns-2 lg:columns-3 gap-4 space-y-4">
+          {galleryImages.map((image, index) => (
+            <motion.div
+              key={index}
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: index * 0.1 }}
+              viewport={{ once: true }}
+              className="break-inside-avoid group relative overflow-hidden rounded-lg"
+            >
+              <Image
+                src={image.src}
+                alt={image.alt}
+                width={600}
+                height={index % 2 === 0 ? 800 : 600}
+                className="w-full h-auto object-cover transition-transform duration-500 group-hover:scale-105"
+              />
+              {/* Hover overlay */}
+              <div className="absolute inset-0 bg-brand-red/0 group-hover:bg-brand-red/10 transition-all duration-300" />
+            </motion.div>
+          ))}
+        </div>
+
+        {/* Instagram CTA */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 0.3 }}
+          viewport={{ once: true }}
+          className="text-center mt-12"
+        >
+          <a
+            href="https://www.instagram.com/rawwfadez/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-2 text-white/60 hover:text-brand-red transition-colors text-sm uppercase tracking-wider font-medium"
+          >
+            <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z" />
+            </svg>
+            Follow @rawwfadez for daily content
+          </a>
+        </motion.div>
+      </div>
+    </section>
+  );
+}
